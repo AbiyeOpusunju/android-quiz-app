@@ -7,7 +7,7 @@ Please replace ${\color{green}-- todo}$ with ${\color{blue}-- completed}$ once d
 Include an appropriate screenshot from your application to confirm completion. Screenshots should be added to 
 the /images folder in the top-level repo.\
 \
- PLEAE COMMIT TO THE MAIN BRANCH
+ PLEASE COMMIT TO THE MAIN BRANCH
 ---
 
 ### Quadrants ###
