@@ -39,11 +39,12 @@ composable(route = CupcakeScreen.Flavor.name) {
 REQUIRED WORK
 
 Please make sure that you have a commit point that matches the end of the exercise and will produce the following 
-navigational sequence as shown in the screenshot. 
+navigational sequence as shown in the screenshot. (Note that screens 3 and 4 below are from an older emulator and this is the reason
+of a slight change in style from 1 and 2)
 
 |                   **Screen 1**                   |                   **Screen 2**                   |                   **Screen 3**                   |                   **Screen 4**                   |
 |:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|
-| ![cupcake screen shot](../images/cupcake1-1.png) | ![cupcake screen shot](../images/cupcake1-2.png) | ![cupcake screen shot](../images/cupcake1-3.png) | ![cupcake screen shot](../images/cupcake1-4.png) |
+| ![cupcake screen shot](../images/cupcake1-1.png) | ![cupcake screen shot](../images/cupcake1-2.png) | ![cupcake screen shot](../images/cupcake3.png) | ![cupcake screen shot](../images/cupcake4.png) |
 
 
 EXTENSION
