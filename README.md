@@ -3,8 +3,8 @@
 
 ### Do not change the folder structure in this repo. ###
 
-## NAME: ~INSERT NAME~
-## STUDENT ID: ~INSERT ID~
+## NAME: Abiye Opusunju
+## STUDENT ID: 77321992
 
 By submitting this work you are confirming that the work in this repo is your own, with all credit given to any sources of help. 
 Such sources might include software tools, internet tutorials/references, AI.
