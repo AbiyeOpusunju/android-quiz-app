@@ -71,15 +71,17 @@ fun AffirmationDialog(affirmation: Any, onDismiss: () -> Unit) {
 }
 
 @Composable
-fun AffirmationCard(affirmation: Affirmation, modifier: Modifier = Modifier) {
-    Card(modifier = modifier) {
+fun AffirmationCard(affirmation: Affirmation, onClick: () -> Unit, modifier: Modifier = Modifier) {
+    val context = LocalContext.current
+    Card(modifier = modifier.clickable {
+        Toast.makeText(context, context.getString(affirmation.stringResourceId), Toast.LENGTH_SHORT).show()
+        onClick()
+    }) {
         Column {
             Image(
                 painter = painterResource(affirmation.imageResourceId),
                 contentDescription = stringResource(affirmation.stringResourceId),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(194.dp),
+                modifier = Modifier.fillMaxWidth().height(194.dp),
                 contentScale = ContentScale.Crop
             )
             Text(
@@ -90,6 +92,7 @@ fun AffirmationCard(affirmation: Affirmation, modifier: Modifier = Modifier) {
         }
     }
 }
+
 
 @Composable
 fun AffirmationsList(
