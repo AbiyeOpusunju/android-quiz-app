@@ -2,11 +2,13 @@ package com.example.quadrants
 
 import androidx.compose.ui.graphics.Color
 import android.os.Bundle
+import androidx.compose.foundation.Image
+import androidx.compose.ui.res.painterResource
+import androidx.compose.foundation.layout.size
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -45,6 +47,7 @@ fun QuadrantCard(
     title: String,
     description: String,
     backgroundColor: Color,
+    imageRes: Int,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -55,10 +58,16 @@ fun QuadrantCard(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        Image(
+            painter = painterResource( imageRes),
+            contentDescription = title,
+            modifier = Modifier.size(100.dp)
+        )
+
         Text(
             text = title,
             fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(bottom = 16.dp)
+            modifier = Modifier.padding(top = 16.dp, bottom = 16.dp)
         )
         Text(
             text = description,
@@ -74,12 +83,14 @@ fun MainPage(modifier: Modifier = Modifier) {
                 title = stringResource(R.string.first_title),
                 description = stringResource(R.string.first_description),
                 backgroundColor = Color(0xFFEADDFF),
+                imageRes = R.drawable.nigerian_flag,
                 modifier = Modifier.weight(1f)
             )
             QuadrantCard(
                 title = stringResource(R.string.second_title),
                 description = stringResource(R.string.second_description),
                 backgroundColor = Color(0xFFD0BCFF),
+                imageRes = R.drawable.united_state_flag,
                 modifier = Modifier.weight(1f)
             )
         }
@@ -88,12 +99,14 @@ fun MainPage(modifier: Modifier = Modifier) {
                 title = stringResource(R.string.third_title),
                 description = stringResource(R.string.third_description),
                 backgroundColor = Color(0xFFB69DF8),
+                imageRes = R.drawable.united_kingdom_flag,
                 modifier = Modifier.weight(1f)
             )
             QuadrantCard(
                 title = stringResource(R.string.fourth_title),
                 description = stringResource(R.string.fourth_description),
                 backgroundColor = Color(0xFFF6EDFF),
+                imageRes = R.drawable.russia_flag,
                 modifier = Modifier.weight(1f)
             )
         }
