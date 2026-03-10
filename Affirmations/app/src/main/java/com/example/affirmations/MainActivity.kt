@@ -92,12 +92,16 @@ fun AffirmationCard(affirmation: Affirmation, modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun AffirmationsList(affirmationList: List<Affirmation>, modifier: Modifier = Modifier) {
+fun AffirmationsList(
+    affirmationList: List<Affirmation>,
+    onAffirmationClick: (Affirmation) -> Unit,
+    modifier: Modifier = Modifier) {
     LazyColumn(modifier = modifier) {
         items(affirmationList) { affirmation ->
         AffirmationCard(
-                affirmation = affirmation,
-                modifier = Modifier.padding(8.dp)
+            affirmation = affirmation,
+            onClick = { onAffirmationClick(affirmation) },
+            modifier = Modifier.padding(8.dp)
             )
         }
     }
