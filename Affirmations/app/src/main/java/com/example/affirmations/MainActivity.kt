@@ -22,8 +22,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -53,25 +54,23 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainPage(modifier: Modifier = Modifier) {
-    var selectedAffirmation by remember { mutableStateOf<Affirmation?> (null)}
+    val affirmationList = Datasource().loadAffirmations()
+    var selectedIndex by rememberSaveable { mutableIntStateOf(-1)}
 
     AffirmationsList(
-        affirmationList = Datasource().loadAffirmations(),
+        affirmationList = affirmationList,
         onAffirmationClick = { affirmation ->
-            selectedAffirmation = affirmation
-        }
+            selectedIndex = affirmationList.indexOf(affirmation)
+        },
+        modifier = modifier
+
     )
-    if (selectedAffirmation != null) {
+    if (selectedIndex >= 0) {
         AffirmationDialog(
-            affirmation = selectedAffirmation!!,
-            onDismiss = { selectedAffirmation = null }
+            affirmation = affirmationList[selectedIndex],
+            onDismiss = { selectedIndex = -1 }
         )
     }
-}
-
-@Composable
-fun AffirmationDialog(affirmation: Any, onDismiss: () -> Unit) {
-    TODO("Not yet implemented")
 }
 
 @Composable
