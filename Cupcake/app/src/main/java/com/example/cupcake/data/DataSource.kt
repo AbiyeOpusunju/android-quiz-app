@@ -31,4 +31,11 @@ object DataSource {
         Pair(R.string.six_cupcakes, 6),
         Pair(R.string.twelve_cupcakes, 12)
     )
+    val toppings = listOf(
+        "None" to 0.00,
+        "Sprinkles" to 0.50,
+        "Chocolate Chips" to 0.75,
+        "Whipped Cream" to 1.00,
+        "Strawberries" to 1.25
+    )
 }
