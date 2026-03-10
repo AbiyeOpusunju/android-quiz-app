@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -16,6 +18,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -45,10 +49,27 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainPage(modifier: Modifier = Modifier) {
+    var selectedAffirmation by remember { mutableStateOf<Affirmation?> (null)}
+
     AffirmationsList(
-        affirmationList = Datasource().loadAffirmations()
+        affirmationList = Datasource().loadAffirmations(),
+        onAffirmationClick = { affirmation ->
+            selectedAffirmation = affirmation
+        }
     )
+    if (selectedAffirmation != null) {
+        AffirmationDialog(
+            affirmation = selectedAffirmation!!,
+            onDismiss = { selectedAffirmation = null }
+        )
+    }
 }
+
+@Composable
+fun AffirmationDialog(affirmation: Any, onDismiss: () -> Unit) {
+    TODO("Not yet implemented")
+}
+
 @Composable
 fun AffirmationCard(affirmation: Affirmation, modifier: Modifier = Modifier) {
     Card(modifier = modifier) {
