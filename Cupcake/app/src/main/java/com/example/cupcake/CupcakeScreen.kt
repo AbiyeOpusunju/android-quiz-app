@@ -39,6 +39,13 @@ import com.example.cupcake.ui.OrderViewModel
  * Composable that displays the topBar and displays back button if back navigation is possible.
  */
 @OptIn(ExperimentalMaterial3Api::class)
+enum class CupcakeScreen {
+    Start,
+    Flavor,
+    Pickup,
+    Summary
+}
+
 @Composable
 fun CupcakeAppBar(
     canNavigateBack: Boolean,
