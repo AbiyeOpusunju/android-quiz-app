@@ -52,6 +52,7 @@ import com.example.cupcake.ui.StartOrderScreen
 enum class CupcakeScreen {
     Start,
     Flavor,
+    Topping,
     Pickup,
     Summary
 }
@@ -125,6 +126,19 @@ fun CupcakeApp(
                     subtotal = uiState.price,
                     options = DataSource.flavors.map { id -> stringResource(id) },
                     onSelectionChanged = { viewModel.setFlavor(it) },
+                    onNextButtonClicked = { navController.navigate(CupcakeScreen.Topping.name) },
+                    onCancelButtonClicked = { cancelOrderAndNavigateToStart(viewModel, navController) },
+                    modifier = Modifier.fillMaxHeight()
+                )
+            }
+            composable(route = CupcakeScreen.Topping.name) {
+                SelectOptionScreen(
+                    subtotal = uiState.price,
+                    options = DataSource.toppings.map { "${it.first} (+£${String.format("%.2f", it.second)}/each)" },
+                    onSelectionChanged = { selectedOption ->
+                        val topping = DataSource.toppings.first { "${it.first} (+£${String.format("%.2f", it.second)}/each)" == selectedOption }
+                        viewModel.setTopping(topping.first, topping.second)
+                    },
                     onNextButtonClicked = { navController.navigate(CupcakeScreen.Pickup.name) },
                     onCancelButtonClicked = { cancelOrderAndNavigateToStart(viewModel, navController) },
                     modifier = Modifier.fillMaxHeight()
