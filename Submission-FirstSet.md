@@ -14,7 +14,7 @@ the /images folder in the top-level repo.\
 
 |   **First Part ${\color{green}-- todo}$**    |    **Extension ${\color{green}-- todo}$**    |
 |:--------------------------------------------:|:--------------------------------------------:|
-| ![quadrant part 1](./images/placeholder.jpg) | ![quadrant part 2](./images/Quadrant_exercise) |
+| ![quadrant part 1](./images/placeholder.jpg) | ![quadrant part 2](./images/Quadrant_exercise.png) |
 
 ---
 ### Woof ###
