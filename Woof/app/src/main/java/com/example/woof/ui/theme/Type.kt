@@ -32,4 +32,24 @@ val Montserrat = FontFamily(
 )
 // Set of Material typography styles to start with
 val Typography = Typography(
+    displayLarge = TextStyle(
+        fontFamily = AbrilFatface,
+        fontWeight = FontWeight.Normal,
+        fontSize = 36.sp
+    ),
+    displayMedium = TextStyle(
+        fontFamily = Montserrat,
+        fontWeight = FontWeight.Bold,
+        fontSize = 20.sp
+    ),
+    labelSmall = TextStyle(
+        fontFamily = Montserrat,
+        fontWeight = FontWeight.Bold,
+        fontSize = 14.sp
+    ),
+    bodyLarge = TextStyle(
+        fontFamily = Montserrat,
+        fontWeight = FontWeight.Normal,
+        fontSize = 14.sp
+    )
 )
