@@ -53,6 +53,7 @@ import com.example.woof.ui.theme.WoofTheme
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
@@ -130,6 +131,11 @@ fun DogItem(
         ) {
             DogIcon(dog.imageResourceId)
             DogInformation(dog.name, dog.age)
+            Spacer(modifier = Modifier.weight(1f))
+            DogItemButton(
+                expanded = expanded,
+                onClick = { expanded = !expanded }
+            )
         }
     }
 }
