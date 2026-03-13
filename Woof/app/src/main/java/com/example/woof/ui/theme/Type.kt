@@ -35,22 +35,22 @@ val Poppins = FontFamily(
 // Set of Material typography styles to start with
 val Typography = Typography(
     displayLarge = TextStyle(
-        fontFamily = AbrilFatface,
+        fontFamily = Pacifico,
         fontWeight = FontWeight.Normal,
         fontSize = 36.sp
     ),
     displayMedium = TextStyle(
-        fontFamily = Montserrat,
+        fontFamily = Poppins,
         fontWeight = FontWeight.Bold,
         fontSize = 20.sp
     ),
     labelSmall = TextStyle(
-        fontFamily = Montserrat,
+        fontFamily = Poppins,
         fontWeight = FontWeight.Bold,
         fontSize = 14.sp
     ),
     bodyLarge = TextStyle(
-        fontFamily = Montserrat,
+        fontFamily = Poppins,
         fontWeight = FontWeight.Normal,
         fontSize = 14.sp
     )
