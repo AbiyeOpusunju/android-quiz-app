@@ -101,7 +101,7 @@ fun AffirmationDialog(affirmation: Affirmation, onDismiss: () -> Unit) {
         onDismissRequest = onDismiss,
         confirmButton = {},
         title = { Text(text = stringResource(affirmation.stringResourceId)) },
-        text = { Text(text = "Affirmation selected") }
+        text = { }
     )
 }
 
