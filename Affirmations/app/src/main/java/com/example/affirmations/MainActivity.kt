@@ -100,11 +100,23 @@ fun AffirmationDialog(affirmation: Affirmation, onDismiss: () -> Unit) {
     AlertDialog(
         onDismissRequest = onDismiss,
         confirmButton = {},
-        title = { Text(text = stringResource(affirmation.stringResourceId)) },
-        text = { }
+        text = {
+            Column {
+            Image(
+                painter = painterResource(affirmation.imageResourceId),
+                contentDescription = stringResource(affirmation.stringResourceId),
+                modifier = Modifier.fillMaxWidth(),
+                contentScale = ContentScale.Crop
+            )
+            Text(
+                text = stringResource(affirmation.stringResourceId),
+                modifier = Modifier.padding(top = 8.dp),
+                style = MaterialTheme.typography.bodyLarge
+            )
+        }
+        }
     )
 }
-
 
 
 @Composable
