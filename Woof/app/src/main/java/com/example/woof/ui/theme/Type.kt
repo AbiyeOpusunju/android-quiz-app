@@ -27,10 +27,11 @@ val Pacifico = FontFamily(
     Font(R.font.pacifico_regular)
 )
 
-val Montserrat = FontFamily(
-    Font(R.font.montserrat_regular),
-    Font(R.font.montserrat_bold, FontWeight.Bold)
+val Poppins = FontFamily(
+    Font(R.font.poppins_regular),
+    Font(R.font.poppins_bold, FontWeight.Bold)
 )
+
 // Set of Material typography styles to start with
 val Typography = Typography(
     displayLarge = TextStyle(
