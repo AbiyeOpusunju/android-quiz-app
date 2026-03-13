@@ -48,8 +48,8 @@ fun MainPage(modifier: Modifier = Modifier) {
     Column(modifier = modifier.fillMaxSize()) {
         Row(modifier = Modifier.weight(1f)) {
             QuadrantCard(
-                title = stringResource(R.string.first_title),
-                description = stringResource(R.string.first_description),
+                title = stringResource(R.string.usa_name),
+                description = "",
                 backgroundColor = Color(0xFFEADDFF),
                 modifier = Modifier.weight(1f),
                 imageRes = R.drawable.united_states_flag
