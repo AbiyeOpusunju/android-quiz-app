@@ -33,7 +33,7 @@ the /images folder in the top-level repo.\
 
 ### Affirmations ###
 
-|     **First Part ${\color{blue}-- todo}$**      |      **Extension ${\color{blue}-- todo}$**      |
+|     **First Part ${\color{blue}-- completed}$**      |      **Extension ${\color{blue}-- completed}$**      |
 |:-----------------------------------------------:|:-----------------------------------------------:|
 | ![affirmation part 1](./images/affirmations_base.png) | ![affirmation part 2](./images/affirmations_extension.png) |
 
