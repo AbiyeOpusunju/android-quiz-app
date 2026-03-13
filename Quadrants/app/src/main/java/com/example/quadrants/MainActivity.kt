@@ -64,10 +64,11 @@ fun MainPage(modifier: Modifier = Modifier) {
         }
         Row(modifier = Modifier.weight(1f)) {
             QuadrantCard(
-                title = stringResource(R.string.third_title),
-                description = stringResource(R.string.third_description),
+                title = stringResource(R.string.russia_name),
+                description = "",
                 backgroundColor = Color(0xFFB69DF8),
-                modifier = Modifier.weight(1f)
+                modifier = Modifier.weight(1f),
+                imageRes = R.drawable.russia_flag
             )
             QuadrantCard(
                 title = stringResource(R.string.fourth_title),
