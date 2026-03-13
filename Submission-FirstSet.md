@@ -19,15 +19,15 @@ the /images folder in the top-level repo.\
 ---
 ### Woof ###
 
-|    **First Part LIGHT ${\color{green}-- todo}$**    |    **First Part DARK ${\color{green}-- todo}$**     |
+|    **First Part LIGHT ${\color{blue}-- completed}$**    |    **First Part DARK ${\color{blue}-- completed}$**     |
 |:---------------------------------------------:|:---------------------------------------------:|
-| ![woof part 1 - light](./images/placeholder.jpg) | ![woof part 1 - dark](./images/placeholder.jpg) |
+| ![woof part 1 - light](./images/woof-base-light.png) | ![woof part 1 - dark](./images/woof-base-dark.png) |
 
 
 
-|    **Extension LIGHT ${\color{green}-- todo}$**    |    **Extension DARK ${\color{green}-- todo}$**     |
+|    **Extension LIGHT ${\color{blue}-- completed}$**    |    **Extension DARK ${\color{blue}-- completed}$**     |
 |:---------------------------------------------:|:---------------------------------------------:|
-| ![woof part 1 - light](./images/placeholder.jpg) | ![woof part 1 - dark](./images/placeholder.jpg) |
+| ![woof ext - light](./images/woof-ext-light.png) | ![woof ext - dark](./images/woof-ext-dark.png) |
 
 ---
 
