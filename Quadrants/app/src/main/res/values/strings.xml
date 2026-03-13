@@ -10,4 +10,9 @@
     <string name="fourth_title">Column composable</string>
     <string name="fourth_description">A layout composable that places its children in a vertical sequence.</string>
 
+    <string name="usa_name">United States</string>
+    <string name="nigeria_name">Nigeria</string>
+    <string name="russia_name">Russia</string>
+    <string name="china_name">China</string>
+
 </resources>
