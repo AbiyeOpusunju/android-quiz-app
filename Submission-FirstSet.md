@@ -12,9 +12,9 @@ the /images folder in the top-level repo.\
 
 ### Quadrants ###
 
-|   **First Part ${\color{green}-- todo}$**    |    **Extension ${\color{green}-- todo}$**    |
-|:--------------------------------------------:|:--------------------------------------------:|
-| ![quadrant part 1](./images/placeholder.jpg) | ![quadrant part 2](./images/Quadrant_exercise.png) |
+|  **First Part ${\color{blue}-- completed}$**   |    **Extension ${\color{blue}-- completed}$**    |
+|:-----------------------------------------------:|:--------------------------------------------:|
+| ![quadrant part 1](./images/quadrants_base.png) | ![quadrant part 2](./images/quadrants_extension.png) |
 
 ---
 ### Woof ###
