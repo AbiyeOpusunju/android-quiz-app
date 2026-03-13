@@ -17,6 +17,9 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.size
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -48,7 +51,8 @@ fun MainPage(modifier: Modifier = Modifier) {
                 title = stringResource(R.string.first_title),
                 description = stringResource(R.string.first_description),
                 backgroundColor = Color(0xFFEADDFF),
-                modifier = Modifier.weight(1f)
+                modifier = Modifier.weight(1f),
+                imageRes = R.drawable.united_states_flag
             )
             QuadrantCard(
                 title = stringResource(R.string.second_title),
@@ -79,7 +83,8 @@ fun QuadrantCard(
     title: String,
     description: String,
     backgroundColor: Color,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    imageRes: Int? = null
 ) {
     Column(
         modifier = modifier
@@ -89,6 +94,15 @@ fun QuadrantCard(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        if (imageRes != null) {
+            Image(
+                painter = painterResource(id = imageRes),
+                contentDescription = title,
+                modifier = Modifier
+                    .size(100.dp)
+                    .padding(bottom = 16.dp)
+            )
+        }
         Text(
             text = title,
             fontWeight = FontWeight.Bold,
