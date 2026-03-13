@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">Quadrants</string>
 
-    <string name="first_title">Nigeria</string>
-    <string name="first_description">A country in West Africa</string>
-    <string name="second_title">United States</string>
-    <string name="second_description">A country in North America</string>
-    <string name="third_title">United Kingdom</string>
-    <string name="third_description">A country in Europe</string>
-    <string name="fourth_title">Russia</string>
-    <string name="fourth_description">A country in Eastern Europe and Asia</string>
+    <string name="first_title"></string>
+    <string name="first_description"></string>
+    <string name="second_title"></string>
+    <string name="second_description"></string>
+    <string name="third_title"></string>
+    <string name="third_description"></string>
+    <string name="fourth_title"></string>
+    <string name="fourth_description"></string>
 
 </resources>
