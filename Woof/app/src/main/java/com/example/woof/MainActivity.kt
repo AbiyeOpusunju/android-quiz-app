@@ -112,6 +112,7 @@ fun DogItem(
     dog: Dog,
     modifier: Modifier = Modifier
 ) {
+    var expanded by remember { mutableStateOf(false) }
     Card(modifier = modifier) {
         Row(
             modifier = Modifier
