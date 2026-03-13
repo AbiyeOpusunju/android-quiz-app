@@ -44,8 +44,32 @@ class MainActivity : ComponentActivity() {
 fun MainPage(modifier: Modifier = Modifier) {
     Column(modifier = modifier.fillMaxSize()) {
         Row(modifier = Modifier.weight(1f)) {
+            QuadrantCard(
+                title = stringResource(R.string.first_title),
+                description = stringResource(R.string.first_description),
+                backgroundColor = Color(0xFFEADDFF),
+                modifier = Modifier.weight(1f)
+            )
+            QuadrantCard(
+                title = stringResource(R.string.second_title),
+                description = stringResource(R.string.second_description),
+                backgroundColor = Color(0xFFD0BCFF),
+                modifier = Modifier.weight(1f)
+            )
         }
         Row(modifier = Modifier.weight(1f)) {
+            QuadrantCard(
+                title = stringResource(R.string.third_title),
+                description = stringResource(R.string.third_description),
+                backgroundColor = Color(0xFFB69DF8),
+                modifier = Modifier.weight(1f)
+            )
+            QuadrantCard(
+                title = stringResource(R.string.fourth_title),
+                description = stringResource(R.string.fourth_description),
+                backgroundColor = Color(0xFFF6EDFF),
+                modifier = Modifier.weight(1f)
+            )
         }
     }
 
