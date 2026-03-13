@@ -124,19 +124,19 @@ fun DogItem(
                     )
                 )
         ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(dimensionResource(R.dimen.padding_small))
-        ) {
-            DogIcon(dog.imageResourceId)
-            DogInformation(dog.name, dog.age)
-            Spacer(modifier = Modifier.weight(1f))
-            DogItemButton(
-                expanded = expanded,
-                onClick = { expanded = !expanded }
-            )
-        }
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(dimensionResource(R.dimen.padding_small))
+            ) {
+                DogIcon(dog.imageResourceId)
+                DogInformation(dog.name, dog.age)
+                Spacer(modifier = Modifier.weight(1f))
+                DogItemButton(
+                    expanded = expanded,
+                    onClick = { expanded = !expanded }
+                )
+            }
             if (expanded) {
                 DogHobby(
                     dog.hobbies,
@@ -149,11 +149,11 @@ fun DogItem(
                 )
             }
 
+        }
     }
 }
-
-    @Composable
-    fun DogItemButton(
+@Composable
+fun DogItemButton(
         expanded: Boolean,
         onClick: () -> Unit,
         modifier: Modifier = Modifier
@@ -170,8 +170,8 @@ fun DogItem(
         }
     }
 
-    @Composable
-    fun DogHobby(
+@Composable
+fun DogHobby(
         @StringRes dogHobby: Int,
         modifier: Modifier = Modifier
     ) {
@@ -275,6 +275,8 @@ fun WoofPreview() {
     WoofTheme(darkTheme = false) {
         WoofApp()
     }
+}
+
 @Preview
 @Composable
 fun WoofDarkThemePreview() {
