@@ -42,14 +42,14 @@ the /images folder in the top-level repo.\
 
 ### Cupcake ###
 
-|        **First Part 1 ${\color{green}-- todo}$**        |         **First Part 2 ${\color{green}-- todo}$**         |        **First Part 3 ${\color{green}-- todo}$**         |         **First Part 4 ${\color{green}-- todo}$**         |
+|        **First Part 1 ${\color{blue}-- completed}$**        |         **First Part 2 ${\color{blue}-- completed}$**         |        **First Part 3 ${\color{blue}-- completed}$**         |         **First Part 4 ${\color{blue}-- completed}$**         |
 |:-------------------------------------------------------:|:---------------------------------------------------------:|:--------------------------------------------------------:|:---------------------------------------------------------:|
 | ![cupcake part 1 - 1](./images/cupcake_startscreen.png) | ![cupcake part 1 - 2](./images/cupcake_flavourscreen.png) | ![cupcake part 1 - 3](./images/cupcake_pickupscreen.png) | ![cupcake part 1 - 4](./images/cupcake_summaryscreen.png) |
 
 
 
-|    **Extension 1 ${\color{green}-- todo}$**    |    **Extension 2 ${\color{green}-- todo}$**     | **Extension 3 ${\color{green}-- todo}$**    |    **Extension 4 ${\color{green}-- todo}$**     | **Extension 5 ${\color{green}-- todo}$**     |
+|    **Extension 1 ${\color{blue}-- completed}$**    |    **Extension 2 ${\color{blue}-- completed}$**     | **Extension 3 ${\color{blue}-- completed}$**    |    **Extension 4 ${\color{blue}-- completed}$**     | **Extension 5 ${\color{blue}-- completed}$**     |
 |:---------------------------------------------:|:---------------------------------------------:|:---------------------------------------------:|:---------------------------------------------:| :---------------------------------------------:|
-| ![cupcake part 1 - 1](./images/placeholder.jpg) | ![cupcake part 1 - 2](./images/placeholder.jpg) | ![cupcake part 1 - 3](./images/placeholder.jpg) | ![cupcake part 1 - 4](./images/placeholder.jpg) | ![cupcake part 1 - 4](./images/placeholder.jpg) |
+| ![cupcake ext 1](./images/cupcake_startextension.png) | ![cupcake ext 2](./images/cupcuke_flavourextension.png) | ![cupcake ext 3](./images/cupcake_toppingextension.png) | ![cupcake ext 4](./images/cupcake_pickupextension.png) | ![cupcake ext 5](./images/cupcake_summaryextension.png) |
 
 ---
