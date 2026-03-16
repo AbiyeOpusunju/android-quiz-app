@@ -42,9 +42,9 @@ the /images folder in the top-level repo.\
 
 ### Cupcake ###
 
-|    **First Part 1 ${\color{green}-- todo}$**    |    **First Part 2 ${\color{green}-- todo}$**     | **First Part 3 ${\color{green}-- todo}$**    |    **First Part 4 ${\color{green}-- todo}$**     |
-|:---------------------------------------------:|:---------------------------------------------:|:---------------------------------------------:|:---------------------------------------------:|
-| ![cupcake part 1 - 1](./images/placeholder.jpg) | ![cupcake part 1 - 2](./images/placeholder.jpg) | ![cupcake part 1 - 3](./images/placeholder.jpg) | ![cupcake part 1 - 4](./images/placeholder.jpg) |
+|        **First Part 1 ${\color{green}-- todo}$**        |         **First Part 2 ${\color{green}-- todo}$**         |        **First Part 3 ${\color{green}-- todo}$**         |         **First Part 4 ${\color{green}-- todo}$**         |
+|:-------------------------------------------------------:|:---------------------------------------------------------:|:--------------------------------------------------------:|:---------------------------------------------------------:|
+| ![cupcake part 1 - 1](./images/cupcake_startscreen.png) | ![cupcake part 1 - 2](./images/cupcake_flavourscreen.png) | ![cupcake part 1 - 3](./images/cupcake_pickupscreen.png) | ![cupcake part 1 - 4](./images/cupcake_summaryscreen.png) |
 
 
 
