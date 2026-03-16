@@ -66,6 +66,21 @@ class OrderViewModel : ViewModel() {
         }
     }
 
+
+    /**
+     * Set the [topping] and its [pricePerCupcake] for this order's state and update the price
+     */
+    fun setTopping(topping: String, pricePerCupcake: Double) {
+        _uiState.update { currentState ->
+            currentState.copy(
+                topping = topping,
+                toppingPrice = pricePerCupcake,
+                price = calculatePrice(toppingPrice = pricePerCupcake)
+            )
+        }
+    }
+
+
     /**
      * Set the [pickupDate] for this order's state and update the price
      */
