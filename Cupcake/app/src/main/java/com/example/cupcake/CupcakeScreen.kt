@@ -52,10 +52,10 @@ import android.content.Context
 import android.content.Intent
 
 enum class CupcakeScreen {
-    Start,
-    Flavor,
-    Pickup,
-    Summary
+    Start (title = R.string.app_name),
+    Flavor (title = R.string.choose_flavor),
+    Pickup (title = R.string.choose_pickup_date),
+    Summary (title = R.string.order_summary)
 }
 /**
  * Composable that displays the topBar and displays back button if back navigation is possible.
