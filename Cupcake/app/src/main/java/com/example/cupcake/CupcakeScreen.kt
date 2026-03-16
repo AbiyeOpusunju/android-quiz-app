@@ -50,6 +50,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.cupcake.ui.OrderViewModel
 import android.content.Context
 import android.content.Intent
+import androidx.annotation.StringRes
 
 enum class CupcakeScreen {
     Start (title = R.string.app_name),
