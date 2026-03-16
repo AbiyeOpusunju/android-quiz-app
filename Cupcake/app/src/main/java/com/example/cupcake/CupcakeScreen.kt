@@ -15,6 +15,13 @@
  */
 package com.example.cupcake
 
+enum class CupcakeScreen {
+    Start,
+    Flavor,
+    Pickup,
+    Summary
+}
+
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
