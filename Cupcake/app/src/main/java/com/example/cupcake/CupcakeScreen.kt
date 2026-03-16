@@ -118,6 +118,20 @@ fun CupcakeApp(
                         .padding(dimensionResource(R.dimen.padding_medium))
                 )
             }
+            composable(route = CupcakeScreen.Flavor.name) {
+                val context = LocalContext.current
+                SelectOptionScreen(
+                    subtotal = uiState.price,
+                    onNextButtonClicked = { navController.navigate(CupcakeScreen.Pickup.name) },
+                    onCancelButtonClicked = {
+                        cancelOrderAndNavigateToStart(viewModel, navController)
+                    },
+                    options = DataSource.flavors.map { id -> context.resources.getString(id) },
+                    onSelectionChanged = { viewModel.setFlavor(it) },
+                    modifier = Modifier.fillMaxHeight()
+                )
+            }
+
         }
     }
 
