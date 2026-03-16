@@ -139,6 +139,22 @@ fun CupcakeApp(
                     modifier = Modifier.fillMaxHeight()
                 )
             }
+            composable(route = CupcakeScreen.Topping.name) {
+                SelectOptionScreen(
+                    subtotal = uiState.price,
+                    options = DataSource.toppings.map { "${it.first} (+£${String.format("%.2f", it.second)}/each)" },
+                    onSelectionChanged = { selectedOption ->
+                        val topping = DataSource.toppings.first { "${it.first} (+£${String.format("%.2f", it.second)}/each)" == selectedOption }
+                        viewModel.setTopping(topping.first, topping.second)
+                    },
+                    onNextButtonClicked = { navController.navigate(CupcakeScreen.Pickup.name) },
+                    onCancelButtonClicked = {
+                        cancelOrderAndNavigateToStart(viewModel, navController)
+                    },
+                    modifier = Modifier.fillMaxHeight()
+                )
+            }
+
             composable(route = CupcakeScreen.Pickup.name) {
                 SelectOptionScreen(
                     subtotal = uiState.price,
