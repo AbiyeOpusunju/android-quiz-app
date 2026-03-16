@@ -101,6 +101,7 @@ fun CupcakeApp(
                 backStackEntry?.destination?.route ?: CupcakeScreen.Start.name
             )
             CupcakeAppBar(
+                currentScreen = currentScreen,
                 canNavigateBack = navController.previousBackStackEntry != null,
                 navigateUp = { navController.navigateUp() }
             )
