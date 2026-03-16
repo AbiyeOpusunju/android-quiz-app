@@ -143,6 +143,20 @@ fun CupcakeApp(
                     modifier = Modifier.fillMaxHeight()
                 )
             }
+            composable(route = CupcakeScreen.Summary.name) {
+                val context = LocalContext.current
+                OrderSummaryScreen(
+                    orderUiState = uiState,
+                    onCancelButtonClicked = {
+                        cancelOrderAndNavigateToStart(viewModel, navController)
+                    },
+                    onSendButtonClicked = { subject, summary ->
+                        shareOrder(context, subject = subject, summary = summary)
+                    },
+                    modifier = Modifier.fillMaxHeight()
+                )
+            }
+
 
 
         }
