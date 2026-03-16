@@ -15,12 +15,7 @@
  */
 package com.example.cupcake
 
-enum class CupcakeScreen {
-    Start,
-    Flavor,
-    Pickup,
-    Summary
-}
+
 
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -56,7 +51,12 @@ import com.example.cupcake.ui.OrderViewModel
 import android.content.Context
 import android.content.Intent
 
-
+enum class CupcakeScreen {
+    Start,
+    Flavor,
+    Pickup,
+    Summary
+}
 /**
  * Composable that displays the topBar and displays back button if back navigation is possible.
  */
