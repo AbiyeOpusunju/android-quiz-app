@@ -105,9 +105,10 @@ class OrderViewModel : ViewModel() {
      */
     private fun calculatePrice(
         quantity: Int = _uiState.value.quantity,
-        pickupDate: String = _uiState.value.date
+        pickupDate: String = _uiState.value.date,
+        toppingPrice: Double = _uiState.value.toppingPrice
     ): String {
-        var calculatedPrice = quantity * PRICE_PER_CUPCAKE
+        var calculatedPrice = quantity * (PRICE_PER_CUPCAKE + toppingPrice)//
         // If the user selected the first option (today) for pickup, add the surcharge
         if (pickupOptions()[0] == pickupDate) {
             calculatedPrice += PRICE_FOR_SAME_DAY_PICKUP
