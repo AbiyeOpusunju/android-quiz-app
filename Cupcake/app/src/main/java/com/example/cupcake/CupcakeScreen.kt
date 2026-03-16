@@ -94,6 +94,10 @@ fun CupcakeApp(
 
     Scaffold(
         topBar = {
+            val backStackEntry by navController.currentBackStackEntryAsState()
+            val currentScreen = CupcakeScreen.valueOf(
+                backStackEntry?.destination?.route ?: CupcakeScreen.Start.name
+            )
             CupcakeAppBar(
                 canNavigateBack = false,
                 navigateUp = { /* TODO: implement back navigation */ }
@@ -158,10 +162,9 @@ fun CupcakeApp(
             }
 
 
-
         }
     }
-
+}
 private fun cancelOrderAndNavigateToStart(
     viewModel: OrderViewModel,
     navController: NavHostController
