@@ -25,6 +25,10 @@ data class OrderUiState(
     /** Flavor of the cupcakes in the order (such as "Chocolate", "Vanilla", etc..) */
     val flavor: String = "",
     /** Selected date for pickup (such as "Jan 1") */
+    val topping: String = "",
+    /** Price per cupcake for the selected topping */
+    val toppingPrice: Double = 0.00,
+    /** Selected date for pickup (such as "Jan 1") */
     val date: String = "",
     /** Total price for the order */
     val price: String = "",
