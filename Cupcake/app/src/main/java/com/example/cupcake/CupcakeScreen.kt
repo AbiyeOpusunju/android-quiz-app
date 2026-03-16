@@ -52,7 +52,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.annotation.StringRes
 
-enum class CupcakeScreen {
+enum class CupcakeScreen (@StringRes val title: Int) {
     Start (title = R.string.app_name),
     Flavor (title = R.string.choose_flavor),
     Pickup (title = R.string.choose_pickup_date),
