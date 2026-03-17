@@ -108,7 +108,7 @@ fun AffirmationDialog(affirmation: Affirmation, onDismiss: () -> Unit) {
                 )
                 Text(
                     text = stringResource(affirmation.stringResourceId),
-                    modifier = Modifier.padding(top = 8.dp),
+                    modifier = Modifier.padding(16.dp),
                     style = MaterialTheme.typography.bodyLarge
                 )
             }
