@@ -17,10 +17,11 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.size
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -50,14 +51,14 @@ fun MainPage(modifier: Modifier = Modifier) {
             QuadrantCard(
                 title = stringResource(R.string.usa_name),
                 description = "",
-                backgroundColor = Color(0xFFEADDFF),
+                backgroundColor = colorResource(R.color.quadrant_1_bg),
                 modifier = Modifier.weight(1f),
                 imageRes = R.drawable.united_states_flag
             )
             QuadrantCard(
                 title = stringResource(R.string.nigeria_name),
                 description = "",
-                backgroundColor = Color(0xFFD0BCFF),
+                backgroundColor = colorResource(R.color.quadrant_2_bg),
                 modifier = Modifier.weight(1f),
                 imageRes = R.drawable.nigeria_flag
             )
@@ -66,14 +67,14 @@ fun MainPage(modifier: Modifier = Modifier) {
             QuadrantCard(
                 title = stringResource(R.string.russia_name),
                 description = "",
-                backgroundColor = Color(0xFFB69DF8),
+                backgroundColor = colorResource(R.color.quadrant_3_bg),
                 modifier = Modifier.weight(1f),
                 imageRes = R.drawable.russia_flag
             )
             QuadrantCard(
                 title = stringResource(R.string.china_name),
                 description = "",
-                backgroundColor = Color(0xFFF6EDFF),
+                backgroundColor = colorResource(R.color.quadrant_4_bg),
                 modifier = Modifier.weight(1f),
                 imageRes = R.drawable.china_flag
             )
