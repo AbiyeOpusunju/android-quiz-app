@@ -63,6 +63,7 @@ fun OrderSummaryScreen(
         R.string.order_details,
         numberOfCupcakes,
         orderUiState.flavor,
+        orderUiState.topping,
         orderUiState.date,
         orderUiState.quantity
     )
