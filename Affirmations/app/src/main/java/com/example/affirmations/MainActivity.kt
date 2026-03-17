@@ -16,8 +16,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
+import androidx.compose.ui.window.Dialog
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -97,25 +97,23 @@ fun AffirmationCard(affirmation: Affirmation, onClick: () -> Unit, modifier: Mod
 }
 @Composable
 fun AffirmationDialog(affirmation: Affirmation, onDismiss: () -> Unit) {
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        confirmButton = {},
-        text = {
+    Dialog(onDismissRequest = onDismiss) {
+        Card {
             Column {
-            Image(
-                painter = painterResource(affirmation.imageResourceId),
-                contentDescription = stringResource(affirmation.stringResourceId),
-                modifier = Modifier.fillMaxWidth(),
-                contentScale = ContentScale.Crop
-            )
-            Text(
-                text = stringResource(affirmation.stringResourceId),
-                modifier = Modifier.padding(top = 8.dp),
-                style = MaterialTheme.typography.bodyLarge
-            )
+                Image(
+                    painter = painterResource(affirmation.imageResourceId),
+                    contentDescription = stringResource(affirmation.stringResourceId),
+                    modifier = Modifier.fillMaxWidth(),
+                    contentScale = ContentScale.Crop
+                )
+                Text(
+                    text = stringResource(affirmation.stringResourceId),
+                    modifier = Modifier.padding(top = 8.dp),
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
         }
-        }
-    )
+    }
 }
 
 
