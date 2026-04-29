@@ -11,13 +11,20 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 @Composable
 fun AppNavigation() {
     val navController = rememberNavController()
+    val viewModel: QuizViewModel = viewModel()
 
     NavHost(
         navController = navController,
         startDestination = Screen.TopicList.name
     ) {
         composable(route = Screen.TopicList.name) {
-            // TopicListScreen - placeholder
+            TopicListScreen(
+                topics = viewModel.getTopics(),
+                onTopicSelected = { topic ->
+                    viewModel.loadQuiz(topic)
+                    navController.navigate(Screen.Question.name + "/$topic")
+                }
+            )
         }
         composable(route = Screen.Question.name + "/{topic}") {
             // QuestionScreen - placeholder
