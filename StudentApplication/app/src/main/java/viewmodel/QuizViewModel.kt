@@ -42,4 +42,9 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
             }
         }
     }
+    fun nextQuestion() {
+        selectedAnswerIndex = -1
+        isAnswered = false
+        currentQuestionIndex++
+    }
 }
