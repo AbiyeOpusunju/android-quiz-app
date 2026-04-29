@@ -22,4 +22,20 @@ fun QuestionScreen(
     onAnswerSelected: (Int) -> Unit,
     onNextClicked: () -> Unit
 ) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+    ) {
+        Text(
+            text = "Question $questionNumber :",
+            style = MaterialTheme.typography.bodyMedium,
+            modifier = Modifier.padding(bottom = 4.dp)
+        )
+        Text(
+            text = question.questionText,
+            style = MaterialTheme.typography.headlineSmall,
+            modifier = Modifier.padding(bottom = 16.dp)
+        )
+    }
 }
