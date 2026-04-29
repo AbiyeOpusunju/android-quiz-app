@@ -41,6 +41,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         if (!isAnswered) {
             selectedAnswerIndex = index
             isAnswered = true
+            userAnswers.add(index)
             if (index == questions[currentQuestionIndex].correctAnswerIndex) {
                 score++
             }
