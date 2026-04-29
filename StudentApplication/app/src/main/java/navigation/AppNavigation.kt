@@ -1,5 +1,6 @@
 package com.dma.studentapplication.navigation
 
+import androidx.navigation.compose.composable
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
@@ -12,5 +13,8 @@ fun AppNavigation() {
         navController = navController,
         startDestination = Screen.TopicList.name
     ) {
+        composable(route = Screen.TopicList.name) {
+            // TopicListScreen - placeholder
+        }
     }
 }
