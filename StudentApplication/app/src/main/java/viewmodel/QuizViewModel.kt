@@ -1,5 +1,6 @@
 package com.dma.studentapplication.viewmodel
 
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
@@ -25,6 +26,8 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     var isAnswered by mutableStateOf(false)
         private set
+
+    val userAnswers = mutableStateListOf<Int>()
 
     fun loadQuiz(topic: String) {
         questions = repository.loadQuestions(topic).shuffled().take(10)
