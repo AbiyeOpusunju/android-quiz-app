@@ -27,8 +27,8 @@ fun AppNavigation() {
                 }
             )
         }
-        composable(route = Screen.Question.name + "/{topic}") {
-            // QuestionScreen - placeholder
+        composable(route = Screen.Question.name + "/{topic}") { backStackEntry ->
+            val topic = backStackEntry.arguments?.getString("topic") ?: ""
         }
         composable(route = Screen.Summary.name + "/{score}/{total}/{topic}") {
             // SummaryScreen - placeholder
