@@ -37,5 +37,9 @@ fun QuestionScreen(
             style = MaterialTheme.typography.headlineSmall,
             modifier = Modifier.padding(bottom = 16.dp)
         )
+        question.options.forEachIndexed { index, option ->
+            val isSelected = index == selectedAnswerIndex
+            val isCorrect = index == question.correctAnswerIndex
+        }
     }
 }
