@@ -1,6 +1,7 @@
 package com.dma.studentapplication.ui.screens
 
 import androidx.compose.runtime.Composable
+import androidx.compose.foundation.layout.statusBarsPadding
 import com.dma.studentapplication.model.Question
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -25,6 +26,7 @@ fun QuestionScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .statusBarsPadding()
             .padding(16.dp)
     ) {
         Text(
