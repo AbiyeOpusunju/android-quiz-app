@@ -15,4 +15,16 @@ fun TopicListScreen(
     topics: List<String>,
     onTopicSelected: (String) -> Unit
 ) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = "Android Topics",
+            style = MaterialTheme.typography.headlineLarge,
+            modifier = Modifier.padding(vertical = 24.dp)
+        )
+    }
 }
