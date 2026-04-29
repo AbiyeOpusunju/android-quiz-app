@@ -12,4 +12,10 @@ class QuizRepository(private val context: Context) {
             ?.map { it.removeSuffix(".json").replace("_", " ") }
             ?: emptyList()
     }
+    fun loadQuestions(topic: String): List<com.dma.studentapplication.model.Question> {
+        val fileName = topic.replace(" ", "_") + ".json"
+        val jsonString = context.assets.open(fileName).bufferedReader().use { it.readText() }
+        val questionList = Json.decodeFromString<QuestionList>(jsonString)
+        return questionList.questions
+    }
 }
