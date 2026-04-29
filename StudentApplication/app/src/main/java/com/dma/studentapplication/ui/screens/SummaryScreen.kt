@@ -15,8 +15,10 @@ import androidx.compose.ui.unit.dp
 fun SummaryScreen(
     score: Int,
     total: Int,
+    questions: List<com.dma.studentapplication.model.Question>,
+    userAnswers: List<Int>,
     onRestartClicked: () -> Unit
-)  {
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()
