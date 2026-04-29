@@ -29,6 +29,16 @@ fun AppNavigation() {
         }
         composable(route = Screen.Question.name + "/{topic}") { backStackEntry ->
             val topic = backStackEntry.arguments?.getString("topic") ?: ""
+            val currentQuestion = viewModel.questions[viewModel.currentQuestionIndex]
+
+            QuestionScreen(
+                question = currentQuestion,
+                questionNumber = viewModel.currentQuestionIndex + 1,
+                selectedAnswerIndex = viewModel.selectedAnswerIndex,
+                isAnswered = viewModel.isAnswered,
+                onAnswerSelected = { viewModel.selectAnswer(it) },
+                onNextClicked = { }
+            )
         }
         composable(route = Screen.Summary.name + "/{score}/{total}/{topic}") {
             // SummaryScreen - placeholder
