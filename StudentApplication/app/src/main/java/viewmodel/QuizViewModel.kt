@@ -26,7 +26,11 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     var isAnswered by mutableStateOf(false)
         private set
 
-    fun getTopics(): List<String> {
-        return repository.getTopics()
+    fun loadQuiz(topic: String) {
+        questions = repository.loadQuestions(topic).shuffled().take(10)
+        currentQuestionIndex = 0
+        score = 0
+        selectedAnswerIndex = -1
+        isAnswered = false
     }
 }
