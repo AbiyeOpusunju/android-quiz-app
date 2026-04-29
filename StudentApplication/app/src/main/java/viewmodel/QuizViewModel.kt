@@ -35,6 +35,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         score = 0
         selectedAnswerIndex = -1
         isAnswered = false
+        userAnswers.clear()
     }
     fun selectAnswer(index: Int) {
         if (!isAnswered) {
