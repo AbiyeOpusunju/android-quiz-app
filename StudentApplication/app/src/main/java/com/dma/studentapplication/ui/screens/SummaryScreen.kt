@@ -41,6 +41,10 @@ fun SummaryScreen(
             style = MaterialTheme.typography.headlineSmall,
             modifier = Modifier.padding(bottom = 24.dp)
         )
+        LazyColumn(
+            modifier = Modifier.weight(1f)
+        ) {
+        }
         Button(
             onClick = onRestartClicked
         ) {
