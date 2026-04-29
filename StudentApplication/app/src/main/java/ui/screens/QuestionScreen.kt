@@ -60,5 +60,15 @@ fun QuestionScreen(
                 }
             }
         }
+        if (isAnswered) {
+            Button(
+                onClick = onNextClicked,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 16.dp)
+            ) {
+                Text(text = "Next")
+            }
+        }
     }
 }
