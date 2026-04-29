@@ -56,6 +56,8 @@ fun AppNavigation() {
             SummaryScreen(
                 score = score,
                 total = total,
+                questions = viewModel.questions,
+                userAnswers = viewModel.userAnswers,
                 onRestartClicked = {
                     navController.popBackStack(Screen.TopicList.name, inclusive = false)
                 }
