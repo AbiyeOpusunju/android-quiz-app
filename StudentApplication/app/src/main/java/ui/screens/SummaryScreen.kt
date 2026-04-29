@@ -16,5 +16,22 @@ fun SummaryScreen(
     score: Int,
     total: Int,
     onRestartClicked: () -> Unit
-) {
+)  {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = "Quiz Finished!",
+            style = MaterialTheme.typography.headlineLarge,
+            modifier = Modifier.padding(vertical = 16.dp)
+        )
+        Text(
+            text = "You scored $score out of $total",
+            style = MaterialTheme.typography.headlineSmall,
+            modifier = Modifier.padding(bottom = 24.dp)
+        )
+    }
 }
