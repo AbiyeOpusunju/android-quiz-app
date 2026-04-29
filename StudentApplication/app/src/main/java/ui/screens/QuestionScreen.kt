@@ -40,6 +40,25 @@ fun QuestionScreen(
         question.options.forEachIndexed { index, option ->
             val isSelected = index == selectedAnswerIndex
             val isCorrect = index == question.correctAnswerIndex
+            if (isSelected || (isAnswered && isCorrect)) {
+                Button(
+                    onClick = { onAnswerSelected(index) },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 4.dp)
+                ) {
+                    Text(text = "${('A' + index)}. $option")
+                }
+            } else {
+                OutlinedButton(
+                    onClick = { onAnswerSelected(index) },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 4.dp)
+                ) {
+                    Text(text = "${('A' + index)}. $option")
+                }
+            }
         }
     }
 }
