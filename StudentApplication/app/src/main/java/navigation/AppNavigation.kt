@@ -1,5 +1,6 @@
 package com.dma.studentapplication.navigation
 
+import com.dma.studentapplication.ui.screens.SummaryScreen
 import com.dma.studentapplication.ui.screens.QuestionScreen
 import androidx.navigation.compose.composable
 import androidx.compose.runtime.Composable
