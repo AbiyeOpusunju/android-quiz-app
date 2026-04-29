@@ -1,5 +1,6 @@
 package com.dma.studentapplication
 
+import com.dma.studentapplication.navigation.AppNavigation
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -28,14 +29,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun StudentApplication() {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(
-            text = "My Student Application"
-        )
-    }
+    AppNavigation()
 }
 
 
