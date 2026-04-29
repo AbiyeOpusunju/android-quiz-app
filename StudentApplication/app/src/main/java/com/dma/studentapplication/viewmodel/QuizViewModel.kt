@@ -1,13 +1,11 @@
 package com.dma.studentapplication.viewmodel
 
+import android.app.Application
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.setValue
-import com.dma.studentapplication.model.Question
-import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import com.dma.studentapplication.data.QuizRepository
+import com.dma.studentapplication.model.Question
 
 class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -51,5 +49,8 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         selectedAnswerIndex = -1
         isAnswered = false
         currentQuestionIndex++
+    }
+    fun getTopics(): List<String> {
+        return repository.getTopics()
     }
 }
