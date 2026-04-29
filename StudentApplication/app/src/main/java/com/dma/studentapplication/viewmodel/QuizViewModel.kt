@@ -6,6 +6,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
 import com.dma.studentapplication.data.QuizRepository
 import com.dma.studentapplication.model.Question
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 
 class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
