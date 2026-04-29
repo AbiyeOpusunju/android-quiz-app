@@ -37,7 +37,15 @@ fun AppNavigation() {
                 selectedAnswerIndex = viewModel.selectedAnswerIndex,
                 isAnswered = viewModel.isAnswered,
                 onAnswerSelected = { viewModel.selectAnswer(it) },
-                onNextClicked = { }
+                onNextClicked = {
+                    if (viewModel.currentQuestionIndex < viewModel.questions.size - 1) {
+                        viewModel.nextQuestion()
+                    } else {
+                        navController.navigate(
+                            Screen.Summary.name + "/${viewModel.score}/${viewModel.questions.size}/$topic"
+                        )
+                    }
+                }
             )
         }
         composable(route = Screen.Summary.name + "/{score}/{total}/{topic}") {
