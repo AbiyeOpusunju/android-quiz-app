@@ -30,5 +30,17 @@ fun TopicListScreen(
             style = MaterialTheme.typography.headlineLarge,
             modifier = Modifier.padding(vertical = 24.dp)
         )
+        LazyColumn {
+            items(topics) { topic ->
+                Button(
+                    onClick = { onTopicSelected(topic) },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 4.dp)
+                ) {
+                    Text(text = topic.replaceFirstChar { it.uppercase() })
+                }
+            }
+        }
     }
 }
