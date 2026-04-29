@@ -52,7 +52,19 @@ fun SummaryScreen(
                 colors = CardDefaults.cardColors(
                     containerColor = if (isCorrect) Color(0xFFC8E6C9) else Color(0xFFFFCDD2)
                 )
-            ) {
+            ) {                    Column(modifier = Modifier.padding(12.dp)) {
+                Text(text = question.questionText)
+                Text(
+                    text = "Correct Answer: ${question.options[question.correctAnswerIndex]}",
+                    color = Color(0xFF2E7D32)
+                )
+                if (!isCorrect) {
+                    Text(
+                        text = "Your Answer: ${question.options[userAnswers[index]]}",
+                        color = Color(0xFFC62828)
+                    )
+                }
+            }
             }
         }
         }
