@@ -49,8 +49,17 @@ fun AppNavigation() {
                 }
             )
         }
-        composable(route = Screen.Summary.name + "/{score}/{total}/{topic}") {
-            // SummaryScreen - placeholder
+        composable(route = Screen.Summary.name + "/{score}/{total}/{topic}") { backStackEntry ->
+            val score = backStackEntry.arguments?.getString("score")?.toIntOrNull() ?: 0
+            val total = backStackEntry.arguments?.getString("total")?.toIntOrNull() ?: 0
+
+            SummaryScreen(
+                score = score,
+                total = total,
+                onRestartClicked = {
+                    navController.popBackStack(Screen.TopicList.name, inclusive = false)
+                }
+            )
         }
 
     }
