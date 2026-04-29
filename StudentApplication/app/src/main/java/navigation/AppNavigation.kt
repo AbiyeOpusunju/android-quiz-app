@@ -16,5 +16,9 @@ fun AppNavigation() {
         composable(route = Screen.TopicList.name) {
             // TopicListScreen - placeholder
         }
+        composable(route = Screen.Question.name + "/{topic}") {
+            // QuestionScreen - placeholder
+        }
+
     }
 }
