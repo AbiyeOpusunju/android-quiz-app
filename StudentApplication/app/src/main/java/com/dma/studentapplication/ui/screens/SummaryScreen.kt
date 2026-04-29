@@ -10,21 +10,13 @@ import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.ui.graphics.Color
 
 @Composable
 fun SummaryScreen(
     score: Int,
     total: Int,
-    questions: List<com.dma.studentapplication.model.Question>,
-    userAnswers: List<Int>,
     onRestartClicked: () -> Unit
-) {
+)  {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -41,10 +33,6 @@ fun SummaryScreen(
             style = MaterialTheme.typography.headlineSmall,
             modifier = Modifier.padding(bottom = 24.dp)
         )
-        LazyColumn(
-            modifier = Modifier.weight(1f)
-        ) {
-        }
         Button(
             onClick = onRestartClicked
         ) {
