@@ -45,6 +45,15 @@ fun SummaryScreen(
             modifier = Modifier.weight(1f)
         ) {            itemsIndexed(questions) { index, question ->
             val isCorrect = userAnswers[index] == question.correctAnswerIndex
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 4.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = if (isCorrect) Color(0xFFC8E6C9) else Color(0xFFFFCDD2)
+                )
+            ) {
+            }
         }
         }
         Button(
