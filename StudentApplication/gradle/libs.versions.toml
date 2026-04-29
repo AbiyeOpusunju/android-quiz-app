@@ -1,5 +1,5 @@
 [versions]
-ksp = "2.3.0-1.0.25"
+ksp = "2.3.0"
 room = "2.7.1"
 lifecycle = "2.9.1"
 navigationCompose = "2.9.0"
