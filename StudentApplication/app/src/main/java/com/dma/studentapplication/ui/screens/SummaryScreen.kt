@@ -43,7 +43,9 @@ fun SummaryScreen(
         )
         LazyColumn(
             modifier = Modifier.weight(1f)
-        ) {
+        ) {            itemsIndexed(questions) { index, question ->
+            val isCorrect = userAnswers[index] == question.correctAnswerIndex
+        }
         }
         Button(
             onClick = onRestartClicked
