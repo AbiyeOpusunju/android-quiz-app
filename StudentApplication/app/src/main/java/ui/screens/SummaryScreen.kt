@@ -33,5 +33,10 @@ fun SummaryScreen(
             style = MaterialTheme.typography.headlineSmall,
             modifier = Modifier.padding(bottom = 24.dp)
         )
+        Button(
+            onClick = onRestartClicked
+        ) {
+            Text(text = "Restart Quiz")
+        }
     }
 }
