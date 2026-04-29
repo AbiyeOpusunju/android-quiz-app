@@ -4,6 +4,9 @@ import androidx.navigation.compose.composable
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
+import com.dma.studentapplication.ui.screens.TopicListScreen
+import com.dma.studentapplication.viewmodel.QuizViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
 fun AppNavigation() {
