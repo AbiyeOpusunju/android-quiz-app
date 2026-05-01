@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [QuizResult::class], version = 1)
+@Database(entities = [QuizResult::class], version = 2)
 abstract class QuizDatabase : RoomDatabase() {
     abstract fun quizResultDao(): QuizResultDao
 
@@ -19,7 +19,7 @@ abstract class QuizDatabase : RoomDatabase() {
                     context.applicationContext,
                     QuizDatabase::class.java,
                     "quiz_database"
-                ).build()
+                ).fallbackToDestructiveMigration().build()
                 INSTANCE = instance
                 instance
             }
