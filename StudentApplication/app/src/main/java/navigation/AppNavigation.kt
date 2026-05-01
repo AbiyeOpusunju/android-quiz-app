@@ -42,6 +42,7 @@ fun AppNavigation() {
                     if (viewModel.currentQuestionIndex < viewModel.questions.size - 1) {
                         viewModel.nextQuestion()
                     } else {
+                        viewModel.saveQuizResult(topic)
                         navController.navigate(
                             Screen.Summary.name + "/${viewModel.score}/${viewModel.questions.size}/$topic"
                         )
