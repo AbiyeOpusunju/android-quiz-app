@@ -38,4 +38,25 @@ fun HistoryScreen(
     onResultClicked: (QuizResult) -> Unit,
     onBackClicked: () -> Unit
 ) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .statusBarsPadding()
+            .padding(16.dp)
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            IconButton(onClick = onBackClicked) {
+                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+            }
+            Text(
+                text = "Quiz History",
+                style = MaterialTheme.typography.headlineLarge,
+                modifier = Modifier.weight(1f)
+            )
+        }
+    }
+
 }
