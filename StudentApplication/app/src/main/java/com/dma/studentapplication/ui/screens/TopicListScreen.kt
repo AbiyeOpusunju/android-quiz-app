@@ -17,7 +17,8 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun TopicListScreen(
     topics: List<String>,
-    onTopicSelected: (String) -> Unit
+    onTopicSelected: (String) -> Unit,
+    onHistoryClicked: () -> Unit
 ) {
     Column(
         modifier = Modifier
