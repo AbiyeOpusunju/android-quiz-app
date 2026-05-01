@@ -64,4 +64,18 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     fun getTopics(): List<String> {
         return repository.getTopics()
     }
+    fun saveQuizResult(topic: String) {
+        val dateFormat = SimpleDateFormat("dd MMM yyyy, HH:mm", Locale.getDefault())
+        val currentDate = dateFormat.format(Date())
+        viewModelScope.launch {
+            dao.insert(
+                QuizResult(
+                    topic = topic,
+                    score = score,
+                    total = questions.size,
+                    date = currentDate
+                )
+            )
+        }
+    }
 }
