@@ -56,6 +56,31 @@ fun HistoryScreen(
                 style = MaterialTheme.typography.headlineLarge,
                 modifier = Modifier.weight(1f)
             )
+            var expanded by remember { mutableStateOf(false) }
+            IconButton(onClick = { expanded = true }) {
+                Icon(Icons.Filled.FilterList, contentDescription = "Filter")
+            }
+            DropdownMenu(
+                expanded = expanded,
+                onDismissRequest = { expanded = false }
+            ) {
+                DropdownMenuItem(
+                    text = { Text("All") },
+                    onClick = {
+                        onFilterSelected("All")
+                        expanded = false
+                    }
+                )
+                topics.forEach { topic ->
+                    DropdownMenuItem(
+                        text = { Text(topic.replaceFirstChar { it.uppercase() }) },
+                        onClick = {
+                            onFilterSelected(topic)
+                            expanded = false
+                        }
+                    )
+                }
+            }
         }
     }
 
