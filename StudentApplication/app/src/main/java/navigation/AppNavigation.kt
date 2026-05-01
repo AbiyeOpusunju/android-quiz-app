@@ -32,6 +32,10 @@ fun AppNavigation() {
                 onTopicSelected = { topic ->
                     viewModel.loadQuiz(topic)
                     navController.navigate(Screen.Question.name + "/$topic")
+                },
+
+                onHistoryClicked = {
+                    navController.navigate(Screen.History.name)
                 }
             )
         }
