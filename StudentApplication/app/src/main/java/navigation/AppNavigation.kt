@@ -75,6 +75,23 @@ fun AppNavigation() {
                 }
             )
         }
+        composable(route = Screen.History.name) {
+            var selectedFilter by remember { mutableStateOf("All") }
+            val results by (
+                if (selectedFilter == "All") viewModel.getAllResults()
+                else viewModel.getResultsByTopic(selectedFilter)
+            ).collectAsState(initial = emptyList())
 
+            HistoryScreen(
+                results = results,
+                topics = viewModel.getTopics(),
+                selectedFilter = selectedFilter,
+                onFilterSelected = { selectedFilter = it },
+                onResultClicked = { result ->
+                    navController.navigate(Screen.HistoryDetail.name + "/${result.id}")
+                },
+                onBackClicked = { navController.popBackStack() }
+            )
+        }
     }
 }
