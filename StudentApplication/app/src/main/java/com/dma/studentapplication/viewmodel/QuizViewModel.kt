@@ -19,6 +19,8 @@ import java.util.Locale
 class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository = QuizRepository(application.applicationContext)
+    private val database = QuizDatabase.getDatabase(application.applicationContext)
+    private val dao = database.quizResultDao()
     var questions by mutableStateOf<List<Question>>(emptyList())
         private set
 
