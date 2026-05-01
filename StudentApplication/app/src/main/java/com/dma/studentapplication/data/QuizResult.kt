@@ -9,5 +9,7 @@ data class QuizResult(
     val topic: String,
     val score: Int,
     val total: Int,
-    val date: String
+    val date: String,
+    val questionsJson: String = "",
+    val userAnswersJson: String = ""
 )
