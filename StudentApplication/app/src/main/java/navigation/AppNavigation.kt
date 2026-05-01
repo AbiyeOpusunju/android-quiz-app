@@ -9,6 +9,13 @@ import androidx.navigation.compose.rememberNavController
 import com.dma.studentapplication.ui.screens.TopicListScreen
 import com.dma.studentapplication.viewmodel.QuizViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.dma.studentapplication.ui.screens.HistoryScreen
+import com.dma.studentapplication.ui.screens.HistoryDetailScreen
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 
 @Composable
 fun AppNavigation() {
