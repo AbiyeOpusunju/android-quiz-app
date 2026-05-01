@@ -16,6 +16,8 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import kotlinx.coroutines.flow.Flow
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.encodeToString
 
 class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
