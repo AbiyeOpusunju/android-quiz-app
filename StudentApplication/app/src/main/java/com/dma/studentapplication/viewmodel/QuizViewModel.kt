@@ -15,6 +15,7 @@ import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import kotlinx.coroutines.flow.Flow
 
 class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -77,5 +78,12 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
                 )
             )
         }
+    }
+    fun getAllResults(): Flow<List<QuizResult>> {
+        return dao.getAllResults()
+    }
+
+    fun getResultsByTopic(topic: String): Flow<List<QuizResult>> {
+        return dao.getResultsByTopic(topic)
     }
 }
