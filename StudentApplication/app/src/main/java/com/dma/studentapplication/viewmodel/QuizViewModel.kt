@@ -76,7 +76,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
                     topic = topic,
                     score = score,
                     total = questions.size,
-                    date = currentDate
+                    date = currentDate,
                     questionsJson = Json.encodeToString(questions),
                     userAnswersJson = userAnswers.joinToString(",")
 
