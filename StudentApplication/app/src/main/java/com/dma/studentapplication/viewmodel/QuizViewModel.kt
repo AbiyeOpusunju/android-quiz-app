@@ -8,6 +8,13 @@ import com.dma.studentapplication.data.QuizRepository
 import com.dma.studentapplication.model.Question
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
+import com.dma.studentapplication.data.QuizDatabase
+import com.dma.studentapplication.data.QuizResult
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
