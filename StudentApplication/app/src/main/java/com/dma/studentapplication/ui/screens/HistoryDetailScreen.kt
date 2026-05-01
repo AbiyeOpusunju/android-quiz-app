@@ -31,4 +31,27 @@ fun HistoryDetailScreen(
     result: QuizResult,
     onBackClicked: () -> Unit
 ) {
+    val questions = Json.decodeFromString<List<Question>>(result.questionsJson)
+    val userAnswers = result.userAnswersJson.split(",").map { it.toInt() }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .statusBarsPadding()
+            .padding(16.dp)
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = "${result.topic.replaceFirstChar { it.uppercase() }} - ${result.score}/${result.total} - ${result.date}",
+                style = MaterialTheme.typography.titleMedium,
+                modifier = Modifier.weight(1f)
+            )
+            IconButton(onClick = onBackClicked) {
+                Icon(Icons.Filled.Close, contentDescription = "Close")
+            }
+        }
+    }
 }
