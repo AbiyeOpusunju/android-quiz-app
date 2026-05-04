@@ -15,4 +15,7 @@ interface QuizResultDao {
 
     @Query("SELECT * FROM quiz_results WHERE topic = :topic ORDER BY id DESC")
     fun getResultsByTopic(topic: String): Flow<List<QuizResult>>
+
+    @Query("SELECT * FROM quiz_results WHERE id = :id")
+    fun getResultById(id: Int): Flow<QuizResult?>
 }

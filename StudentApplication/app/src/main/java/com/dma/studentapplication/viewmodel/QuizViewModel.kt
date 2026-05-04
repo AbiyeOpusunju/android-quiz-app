@@ -91,4 +91,8 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     fun getResultsByTopic(topic: String): Flow<List<QuizResult>> {
         return dao.getResultsByTopic(topic)
     }
+
+    fun getResultById(id: Int): Flow<QuizResult?> {
+        return dao.getResultById(id)
+    }
 }
