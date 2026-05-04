@@ -93,5 +93,16 @@ fun AppNavigation() {
                 onBackClicked = { navController.popBackStack() }
             )
         }
+        composable(route = Screen.HistoryDetail.name + "/{resultId}") { backStackEntry ->
+            val resultId = backStackEntry.arguments?.getString("resultId")?.toIntOrNull() ?: 0
+            val result by viewModel.getResultById(resultId).collectAsState(initial = null)
+
+            result?.let {
+                HistoryDetailScreen(
+                    result = it,
+                    onBackClicked = { navController.popBackStack() }
+                )
+            }
+        }
     }
 }
