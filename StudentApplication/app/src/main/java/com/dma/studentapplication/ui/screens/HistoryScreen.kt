@@ -81,29 +81,27 @@ fun HistoryScreen(
                     )
                 }
             }
-            LazyColumn {
-                items(results) { result ->
-                    Card(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(vertical = 4.dp)
-                            .clickable { onResultClicked(result) }
-                    ) {
-                        Column(modifier = Modifier.padding(12.dp)) {
-                            Text(
-                                text = result.topic.replaceFirstChar { it.uppercase() },
-                                style = MaterialTheme.typography.titleMedium
-                            )
-                            Text(
-                                text = "${result.date} - ${result.score}/${result.total}",
-                                style = MaterialTheme.typography.bodyMedium
-                            )
-                        }
+        }
+        LazyColumn {
+            items(results) { result ->
+                Card(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 4.dp)
+                        .clickable { onResultClicked(result) }
+                ) {
+                    Column(modifier = Modifier.padding(12.dp)) {
+                        Text(
+                            text = result.topic.replaceFirstChar { it.uppercase() },
+                            style = MaterialTheme.typography.titleMedium
+                        )
+                        Text(
+                            text = "${result.date} - ${result.score}/${result.total}",
+                            style = MaterialTheme.typography.bodyMedium
+                        )
                     }
                 }
             }
-
         }
     }
-
 }
