@@ -1,87 +1,85 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/smCM_bLM)
-# DMA-2026 Programming Portfolio
+# Android Quiz App
 
-### Do not change the folder structure in this repo. ###
+An Android quiz application built with **Jetpack Compose** that tests knowledge across multiple Android development topics. Features topic selection, real-time scoring, colour-coded answer review, and a persistent quiz history powered by Room database.
 
-## NAME: Abiye Opusunju
-## STUDENT ID: 77321992
+## Screenshots
 
-By submitting this work you are confirming that the work in this repo is your own, with all credit given to any sources of help. 
-Such sources might include software tools, internet tutorials/references, AI.
+| Topic Selection | Question Screen | Summary Review |
+|:---:|:---:|:---:|
+| ![topics](./images/studentapp_topics.png) | ![question](./images/studentapp_question.png) | ![summary](./images/studentapp_summary.png) |
 
-#### PLEASE FILL IN TABLE WITH ALL SOURCES ####
-(sample entries provided)
+| Quiz History | Filter by Topic | History Detail |
+|:---:|:---:|:---:|
+| ![history](./images/studentapp_history.png) | ![filter](./images/studentapp_filter.png) | ![detail](./images/studentapp_detail.png) |
 
-|        **Title**        |   **Link / Ref**   |
-|:-----------------------:|:------------------:|
-|   Android Studio IDE    |   https://developer.android.com/studio   |
-| Android API Documention |  https://developer.android.com/reference   |
-|  Codelabs Compose Labs  | https://developer.android.com/courses/android-basics-compose/course |
-|                         |     |
-|                         |          |
-|                         |       |
-|                         |   |
-|                         |      |
+## Features
 
-You also confirm that you have read and understood the regulations relating to academic misconduct.
+- **Topic Selection** — Choose from multiple Android development topics loaded dynamically from JSON assets
+- **10-Question Quizzes** — Questions are shuffled and randomly selected each attempt
+- **Real-Time Feedback** — Answers are colour-coded immediately after selection (green for correct, red for incorrect)
+- **Summary Review** — End-of-quiz breakdown showing every question with correct and incorrect answers highlighted
+- **Persistent History** — All quiz results saved to a local Room database
+- **History Filtering** — Filter past results by topic using a dropdown menu
+- **Detailed History View** — Tap any past quiz to review the full colour-coded question breakdown
 
----
+## Architecture
 
-## IMPORTANT PLEASE READ AND MAKE NOTE
+The app follows the **MVVM (Model-View-ViewModel)** pattern with unidirectional data flow:
 
-This repository will contain several Android Projects - but Android Studio **can** only contain a single project at a time. 
-This will mean that to work correctly with this repository.
+```
+UI Layer (Compose Screens)
+    ↕ state down / events up
+Logic Layer (QuizViewModel)
+    ↕
+Data Layer (QuizRepository + Room Database)
+```
 
-1. Clone in the first instance through the Command Window
-2. Open project folders directly in Android Studio
-3. It is recommended that git commands are entered via the terminal window - **do not initialise repositories in 
-subfolders** as the top-level folder is managing commit history
-4. It is intended that each Project is worked on as a separate branch - you will see these via Github or by doing a **git branch --all** 
-command in the terminal window.
-5. This means that you need to switch to the appropriate branch when working on a project. Please try your best to stick to these branches.
+## Tech Stack
 
+| Layer | Technology |
+|---|---|
+| UI | Jetpack Compose, Material 3 |
+| Navigation | Compose Navigation with NavHost |
+| State Management | ViewModel, mutableStateOf, Flow |
+| Database | Room (SQLite abstraction) |
+| Serialization | kotlinx.serialization |
+| Build | Gradle with KSP for annotation processing |
 
----
-***Folder Explanation***
+## Project Structure
 
-Each folder contains a starting Android Studio Project that has been initialised with the current version of **Otter 2 (2025.2.2 Patch 1)**. 
-Inside each folder is a further README.md file that provides more information about the task. 
+```
+com.dma.studentapplication/
+├── data/
+│   ├── Question.kt              # Data model
+│   ├── QuizRepository.kt        # Loads topics and questions from JSON
+│   ├── QuizResult.kt            # Room entity for quiz history
+│   ├── QuizResultDao.kt         # Room DAO with Flow queries
+│   └── QuizDatabase.kt          # Room database singleton
+├── navigation/
+│   ├── Screen.kt                # Route definitions
+│   └── AppNavigation.kt         # NavHost with all routes
+├── ui/screens/
+│   ├── TopicListScreen.kt       # Topic selection
+│   ├── QuestionScreen.kt        # Question display with answer styling
+│   ├── SummaryScreen.kt         # Score and question review
+│   ├── HistoryScreen.kt         # Past results with topic filter
+│   └── HistoryDetailScreen.kt   # Detailed past quiz view
+├── viewmodel/
+│   └── QuizViewModel.kt         # State holder and business logic
+└── MainActivity.kt              # Single Activity entry point
+```
 
-This repository consists of 5 projects.
+## Key Concepts
 
-4 Projects that map to Google Codelabs exercises. Each of these exercises when completed fully will receive a 
-maximum of 10 marks. This is broken down as:
-- 3 marks (codelab exercise)
-- 5 marks (extension)
-- 2 marks (commits, meaningful commit messages and updated Submission-FirstSet.md)
+- Declarative UI with composable functions and modifier chains
+- Navigation with route parameters and back stack management
+- State management with `mutableStateOf` and `mutableStateListOf`
+- Reactive data with Room `Flow` and `collectAsState`
+- Data-driven design — new topics added by dropping a JSON file into assets
+- Design patterns — Repository, Singleton, Observer, MVVM
 
-The fifth project is a larger additional exercise which will build on the skills you have learnt from the codelabs. 
-This will map to the remaining 60% of the module marks. This is broken down as:
-- 25 marks fully completing the requirements (see README in the containing folder)
-- 5 marks (commits, commit messages and updated Submission-StudentApplication.md)
-- 30 marks (meaningful reflective development report - included in Submission-StudentApplication.md, discussing your understanding of Android using this application as the case study)
+## Building
 
-The assignment brief lists the expected deadlines and breaks the exercises into the <u>TWO PARTS</u>.
-
-### FIRST SET
-
-|   **FOLDER**   | **ANDROID CONCEPT** | **URL** |
-|:--------------:|:-------------------:|:---------------------------:|
-| Quadrants |    Compose Layouts   |https://developer.android.com/codelabs/basic-android-kotlin-compose-composables-practice-problems#0|
-|   Woof    |  Material Themes    |https://developer.android.com/codelabs/basic-android-kotlin-compose-material-theming#0|
-|   Affirmations    | Compose ListView     |https://developer.android.com/codelabs/basic-android-kotlin-compose-training-add-scrollable-list#0|
-|    Cupcake     | Compose Navigation  |https://developer.android.com/codelabs/basic-android-kotlin-compose-navigation#0|
-
-### Student Application
-
-|   **FOLDER**   | **ANDROID CONCEPT** | 
-|:--------------:|:-------------------:|
-|    Student Application     | All previous + working with json, serialization, ROOM ORM, ViewModel, Flow|
- 
-
-
-
----
-### Please use the Discussion Forum on the VLE for questions. ###
-
-
+1. Open the `StudentApplication` folder in Android Studio
+2. Sync Gradle
+3. Run on emulator or device (API 24+)
