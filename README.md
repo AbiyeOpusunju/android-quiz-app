@@ -14,13 +14,13 @@ An Android quiz application built with **Jetpack Compose** that tests knowledge 
 
 ## Features
 
-- **Topic Selection** — Choose from multiple Android development topics loaded dynamically from JSON assets
-- **10-Question Quizzes** — Questions are shuffled and randomly selected each attempt
-- **Real-Time Feedback** — Answers are colour-coded immediately after selection (green for correct, red for incorrect)
-- **Summary Review** — End-of-quiz breakdown showing every question with correct and incorrect answers highlighted
-- **Persistent History** — All quiz results saved to a local Room database
-- **History Filtering** — Filter past results by topic using a dropdown menu
-- **Detailed History View** — Tap any past quiz to review the full colour-coded question breakdown
+- **Topic Selection** - Choose from multiple Android development topics loaded dynamically from JSON assets
+- **10-Question Quizzes** - Questions are shuffled and randomly selected each attempt
+- **Real-Time Feedback** - Answers are colour-coded immediately after selection (green for correct, red for incorrect)
+- **Summary Review** - End-of-quiz breakdown showing every question with correct and incorrect answers highlighted
+- **Persistent History** - All quiz results saved to a local Room database
+- **History Filtering** - Filter past results by topic using a dropdown menu
+- **Detailed History View** - Tap any past quiz to review the full colour-coded question breakdown
 
 ## Architecture
 
@@ -75,8 +75,8 @@ com.dma.studentapplication/
 - Navigation with route parameters and back stack management
 - State management with `mutableStateOf` and `mutableStateListOf`
 - Reactive data with Room `Flow` and `collectAsState`
-- Data-driven design — new topics added by dropping a JSON file into assets
-- Design patterns — Repository, Singleton, Observer, MVVM
+- Data-driven design - new topics added by dropping a JSON file into assets
+- Design patterns - Repository, Singleton, Observer, MVVM
 
 ## Building
 
